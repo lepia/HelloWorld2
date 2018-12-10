@@ -23,13 +23,13 @@ app.use(session({
 
 // 몽고DB 연결
 function connectDB() {
-  var databaseUrl = "mongodb://localhost:27017/testdb";
+  var databaseUrl = "mongodb://<dbuser>:<dbpassword>@ds061335.mlab.com:61335/tictactoe1210";
 
   //DB 연결
   mongodb.connect(databaseUrl, function(err, database) { // database 객체
   if (err) throw err;
   console.log('DB 연결완료! :' + databaseUrl);
-  app.set('database', database.db('testdb')); 
+  app.set('database', database.db('tictactoe1210')); 
   // 연결된 객체를 app객체에 저장하여 처리 --> db의 폴더명을 명시
  });
 }
