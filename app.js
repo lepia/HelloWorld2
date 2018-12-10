@@ -23,7 +23,7 @@ app.use(session({
 
 // 몽고DB 연결
 function connectDB() {
-  var databaseUrl = "mongodb://<dbuser>:<dbpassword>@ds061335.mlab.com:61335/tictactoe1210";
+  var databaseUrl = "mongodb://:lepia:young1230@ds061335.mlab.com:61335/tictactoe1210";
 
   //DB 연결
   mongodb.connect(databaseUrl, function(err, database) { // database 객체
